@@ -87,13 +87,10 @@ function run(msg, matches)
 ●#sticker (text)
 تبدیل (text) به استیکر
 
-.......................................
-📡
-- @BeatBot_Team
-.......................................]]
+]]
     if matches[1] == 'help' and is_sudo(msg) then
       send_large_msg("user#id"..msg.from.id, help)      
-   return '💥 Help was sent in your pv '
+   return ':/'
     end
 end 
 
