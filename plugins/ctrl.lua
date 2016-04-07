@@ -26,13 +26,13 @@ local function enable_channel(receiver, to_id)
 	end
 
 	if _config.disabled_channels[receiver] == nil then
-		return 'Bot was on :D'
+		return ':)'
 	end
 	
 	_config.disabled_channels[receiver] = false
 
 	save_config()
-	return 'Bot was on :D'
+	return ':)'
 end
 
 local function disable_channel(receiver, to_id)
@@ -43,7 +43,7 @@ local function disable_channel(receiver, to_id)
 	_config.disabled_channels[receiver] = true
 
 	save_config()
-	return 'Bot was off ;-/'
+	return ':('
 end
 
 local function pre_process(msg)
@@ -85,7 +85,7 @@ local function run(msg, matches)
  if string.match then
      local command = 'git pull'
    text = run_bash(command)
-   local text = text..'Updates were applied GitHub\n@BeatBot_Team'
+   local text = text..';)'
     return text
   end
 end
@@ -93,7 +93,7 @@ end
 		receiver = get_receiver(msg)
 		reload_plugins(true)
 		post_msg(receiver, "Reloaded!", ok_cb, false)
-		return "All plugins reloaded!"
+		return ":]"
 	end
 end
 
